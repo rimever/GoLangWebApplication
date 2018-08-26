@@ -1,2 +1,2 @@
 # GoLangWebApplication
-Go言語によるWebアプリケーション開発片手に演習
+「Go言語によるWebアプリケーション開発」片手に演習

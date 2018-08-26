@@ -16,6 +16,17 @@ type room struct {
 	// clientsには在室している全てのクライアントが保持されます
 	clients map[*client]bool
 }
+
+// newRoomはすぐに利用できるチャットルームを生成します。
+func newRoom() *room {
+	return &room {
+		forward:make(chan[]byte),
+		join: make(chan *client),
+		leave: make(chan *client),
+		clients: make(map[*client]bool),
+	}
+}
+
 func (r *room) run() {
 	for {
 		select {
